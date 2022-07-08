@@ -77,6 +77,7 @@ class _MyAppState extends State<MyApp> {
         backgroundColor: Color(0x99FFFCFC),
         appBar: AppBar(
           title: Text('Calculator'),
+          backgroundColor: Color(0x99FFFCFC),
           centerTitle: true,
         ),
         body: Padding(
@@ -109,44 +110,53 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
               Divider(height: 2, color: Colors.brown),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  buildButton('C', buttonColor: Colors.red),
-                  buildButton('÷', buttonColor: Colors.black54),
-                  buildButton('%', buttonColor: Colors.black54),
-                  buildButton('⌫', buttonColor: Colors.brown),
-                ],
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    buildButton('C', buttonColor: Colors.red),
+                    buildButton('÷', buttonColor: Colors.black54),
+                    buildButton('%', buttonColor: Colors.black54),
+                    buildButton('⌫', buttonColor: Colors.brown),
+                  ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  buildButton('7'),
-                  buildButton('8'),
-                  buildButton('9'),
-                  buildButton('×', buttonColor: Colors.amber),
-                ],
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    buildButton('7'),
+                    buildButton('8'),
+                    buildButton('9'),
+                    buildButton('×', buttonColor: Colors.amber),
+                  ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  buildButton('4'),
-                  buildButton('5'),
-                  buildButton('6'),
-                  buildButton('-', buttonColor: Colors.amber),
-                ],
+
+              SingleChildScrollView(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    buildButton('4'),
+                    buildButton('5'),
+                    buildButton('6'),
+                    buildButton('-', buttonColor: Colors.amber),
+                  ],
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  buildButton('1'),
-                  buildButton('2'),
-                  buildButton('3'),
-                  buildButton('+', buttonColor: Colors.amber),
-                ],
+              SingleChildScrollView(
+                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    buildButton('1'),
+                    buildButton('2'),
+                    buildButton('3'),
+                    buildButton('+', buttonColor: Colors.amber),
+                  ],
               ),
+               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Expanded(child: buildButton('0'), flex: 2),
                   Expanded(child: buildButton('.')),
